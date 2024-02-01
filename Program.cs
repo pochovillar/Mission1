@@ -1,5 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 using Mission1;
+
 class DiceSimulator
 {
     static void Main()
@@ -12,9 +13,9 @@ class DiceSimulator
         DiceRoller diceRoller = new DiceRoller();
         int[] results = diceRoller.SimulateDiceRolls(numberOfRolls);
 
-        PrintHistogram(results, numberOfRolls);
-
+        // Use DiceSimulator class to access PrintHistogram method
+        Mission1.DiceSimulator.PrintHistogram(results, numberOfRolls);
+        // comment to test pushing
         Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
     }
-
 }
